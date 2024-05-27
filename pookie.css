@@ -4,7 +4,7 @@ body {
 
 .reacties {
     width: 350px;
-    font-size: 60px; /* Increase font size */
+    font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -42,21 +42,21 @@ body {
 }
 
 button {
-    padding: 5px 30px; /* Increase padding for bigger button */
-    font-size: 60px; /* Increase font size */
+    padding: 5px 30px; 
+    font-size: 60px; 
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    background-color: #fde2ed; /* Change background color */
-    border: 5px solid #ffafd0; /* Add blue border */
-    border-radius: 25px; /* Add border radius for rounded corners */
-    color: #ffafd0; /* Change text color to white */
-    text-decoration: none; /* Remove underline */
+    background-color: #fde2ed; 
+    border: 5px solid #ffafd0;
+    border-radius: 25px; /* voor de hoeken */
+    color: #ffafd0; 
+    text-decoration: none; 
 }
 
 button:hover {
-    background-color: #ffafd0; /* Change background color on hover */
+    background-color: #ffafd0; 
     color: white;
-    cursor: pointer; /* Show pointer cursor on hover */
+    cursor: pointer; 
 }
 
 div#gameover {
@@ -69,11 +69,11 @@ div#gameover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Optional: Add a semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.8); 
     color: white;
-    z-index: 1000; /* Ensure it appears above other content */
+    z-index: 1000; /* zorgt dat het boven al het andere content verschijnt */
     text-align: center;
-    font-size: 50px; /* Adjust font size as needed */
+    font-size: 50px; 
 }
 
 h1 {

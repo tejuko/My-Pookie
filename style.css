@@ -27,24 +27,24 @@ h1 {
 }
 
 #pookie {
-    margin-bottom: 25px; /* Adding some margin between elements for better spacing */
+    margin-bottom: 25px; /* ziet er mooier uit */
     width: 350px;
 }
 
 a button {
-    padding: 5px 30px; /* Increase padding for bigger button */
-    font-size: 60px; /* Increase font size */
+    padding: 5px 30px; 
+    font-size: 60px; 
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    background-color: #fde2ed; /* Change background color */
-    border: 5px solid #ffafd0; /* Add blue border */
-    border-radius: 25px; /* Add border radius for rounded corners */
-    color: #ffafd0; /* Change text color to white */
-    text-decoration: none; /* Remove underline */
+    background-color: #fde2ed; 
+    border: 5px solid #ffafd0; 
+    border-radius: 25px; /* voor corners */
+    color: #ffafd0;
+    text-decoration: none; 
 }
 
 a button:hover {
-    background-color: #ffafd0; /* Change background color on hover */
+    background-color: #ffafd0; 
     color: white;
-    cursor: pointer; /* Show pointer cursor on hover */
+    cursor: pointer; 
 }
