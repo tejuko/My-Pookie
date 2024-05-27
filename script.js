@@ -34,9 +34,9 @@ function updateImages(buttonType) {
   } else if (counter === -3) {
     hartImage.src = "images/hartx.png";
     if (buttonType === 'slaan') {
-      pookieImage.src = "images/Angry_pookie.png";
+      pookieImage.src = "images/Angrywalk_pookie.png";
     } else if (buttonType === 'pesten') {
-      pookieImage.src = "images/Sad_pookie.png";
+      pookieImage.src = "images/Sadwalk_pookie.png";
     }
     // Show the game over button
     gameOverButton.style.display = 'flex';
