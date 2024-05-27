@@ -4,7 +4,6 @@ const slaanButton = document.querySelector('.Slaanknop');
 const gameOverButton = document.querySelector('#gameover');
 const resetButton = document.getElementById('reset');
 
-
 // Initialize a counter variable
 let counter = 0;
 
@@ -56,9 +55,11 @@ function displayReaction(text) {
 
 // Add an event listener to the knuffelen button
 knuffelenButton.addEventListener('click', () => {
-  counter++;
-  updateImages('knuffelen');
-  displayReaction("Yippie!");
+  if (counter < 2) {
+    counter++;
+    updateImages('knuffelen');
+    displayReaction("Yippie!");
+  }
 });
 
 // Add an event listener to the pesten button
@@ -81,4 +82,3 @@ resetButton.addEventListener('click', () => {
   // Reload the page
   window.location.reload();
 });
-
