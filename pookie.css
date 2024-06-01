@@ -75,6 +75,8 @@ div#gameover {
     text-align: center;
     font-size: 50px; 
 }
+/*bron: ChatGPT
+promt: zorg dat de gameover knop boven al het andere content verschijnt*/
 
 h1 {
     color: #ffafd0;
