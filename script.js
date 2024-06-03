@@ -4,9 +4,11 @@ const slaanButton = document.querySelector('.Slaanknop');
 const gameOverButton = document.querySelector('#gameover');
 const resetButton = document.getElementById('reset');
 
+// Initialize a counter variable
 let counter = 0;
 
-function updateImages() {
+// Function to update the images based on the counter value and button type
+function updateImages(action) {
   const hartImage = document.querySelector('#hart');
   const pookieImage = document.querySelector('#pookie');
 
@@ -24,15 +26,24 @@ function updateImages() {
     pookieImage.src = "images/Neutral_pookie.png";
   } else if (counter === -2) {
     hartImage.src = "images/hartx.png";
-    pookieImage.src = counter <= -2 ? "images/Sad_pookie.png" : "images/Neutral_pookie.png";
+    if (action === 'slaan') {
+      pookieImage.src = "images/Angry_pookie.png";
+    } else if (action === 'pesten') {
+      pookieImage.src = "images/Sad_pookie.png";
+    }
   } else if (counter === -3) {
     hartImage.src = "images/hartx.png";
-    pookieImage.src = counter <= -2 ? "images/Sadwalk_pookie.png" : "images/Neutral_pookie.png";
+    if (action === 'slaan') {
+      pookieImage.src = "images/Angrywalk_pookie.png";
+    } else if (action === 'pesten') {
+      pookieImage.src = "images/Sadwalk_pookie.png";
+    }
     // Show the game over button
     gameOverButton.style.display = 'flex';
   }
 }
 
+// Function to display reaction text and clear it after 1.5 seconds
 function displayReaction(text) {
   const reactie = document.querySelector('.reacties p');
   reactie.textContent = text;
@@ -42,33 +53,32 @@ function displayReaction(text) {
   }, 1500);
 }
 
+// Add an event listener to the knuffelen button
 knuffelenButton.addEventListener('click', () => {
   if (counter < 2) {
     counter++;
-    updateImages();
+    updateImages('knuffelen');
     displayReaction("Yippie!");
   }
 });
-//bron ChatGPT
-//prompt: hoe zorg ik ervoor dat de counter nooit boven de 2 komt?
 
+// Add an event listener to the pesten button
 pestenButton.addEventListener('click', () => {
-  if (counter > -3) {
-    counter--;
-    updateImages();
-    displayReaction("Stop!");
-  }
+  counter--;
+  updateImages('pesten');
+  displayReaction("Stop!");
 });
 
+// Add an event listener to the slaan button
 slaanButton.addEventListener('click', () => {
-  if (counter > -3) {
-    counter--;
-    updateImages();
-    displayReaction("AUW!");
-  }
+  counter--;
+  updateImages('slaan');
+  displayReaction("AUW!");
 });
 
+// Initially hide the game over button
 gameOverButton.style.display = 'none';
 resetButton.addEventListener('click', () => {
+  // Reload the page
   window.location.reload();
 });
